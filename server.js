@@ -3,12 +3,19 @@ const express = require('express')
 const app = express();
 const db = require('./db');
 
+require('dotenv').config();     // This file keep all imp or private credentails
+
+
 // bodyparses is a middleware library for express.js 
 // it is used to parse and extract the body of incoming HTTP request
 // bodyparser helps parse and extract this data from the request so that you can work with it in your express application.
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());   // data received from body or form is in req.body
+
+
+const PORT = process.env.PORT || 3000;  // So it means we are fetchaing port from .env file and if port is not there then use 3000, so it's like security that no one will know our details 
+
 
 
 // app is like blueprint or instance, now we will use app for all the work of server
@@ -30,7 +37,10 @@ app.use('/person', personRoutes);
 app.use('/menu', menuItemRoutes);
 
 
-app.listen(3000, ()=>{
+
+
+
+app.listen(PORT, ()=>{
     console.log("Listening on port 3000");
 });
 // port of app or server

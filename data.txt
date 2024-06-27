@@ -1,0 +1,14 @@
+{
+    "name" : "Kadhi Chawal",
+    "price" : 9.99,
+    "taste": "Spicy",
+    "is_drink" : false,
+    "ingredients": [
+        "rice",
+        "kadhi"
+    ],
+    "num_sales": 1000
+}
+
+
+
