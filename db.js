@@ -260,7 +260,7 @@ const mongoURL = process.env.MONGODB_URL;
 
 mongoose.connect(mongoURL, {
     // useNewUrlParse:true,    - This one is not supported in new mongodb
-    useUnifiedTopology: true
+    // useUnifiedTopology: true
 })
 
 
